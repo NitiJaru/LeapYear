@@ -6,19 +6,7 @@ namespace LeapYear.Lib
     {
         public bool IsLeapYear(int year)
         {
-            // return year % 400 == 0;
-            if (year % 100 == 0 && year % 400 == 0)
-            {
-                return true;
-            }
-            if (year % 4 == 0 && year % 100 !=0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0 && year % 100 !=0));                 
         }
     }
 }
